@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
     <title>Encriptador y desencriptador de texto</title>
 </head>
 
@@ -15,9 +16,13 @@
         </h1>
     </header>
     <main>
-        <textarea name="text"></textarea>
-    <button class="btn-principal">Encriptar</button>
-    <button class="btn-secondary">Desencriptar</button>
+        <section>
+             <input type="text" placeholder="Ingrese el texto aqui" id="texto">
+        </section>
+        <section>
+            <button class="btn-principal" id="boton-encriptar">Encriptar</button>
+            <button class="btn-secondary" id="boton-desencriptar">Desencriptar</button>
+        </section>
     </main>
     <aside>
         <p>Ningún mensaje fue encontrado</p>
@@ -25,6 +30,7 @@
     <footer>
         <p>Angela Londoño - 2022</p>
     </footer>
-</body>
 
+    <script src="js/index.js"></script>
+</body>
 </html>

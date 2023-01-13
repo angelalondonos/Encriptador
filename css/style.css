@@ -4,7 +4,7 @@
     --white-color: #ffffff;
     --bg-color: #E5E5E5;
 }
-
+/* 
 .btn-principal {
     display: flex;
     flex-direction: row;
@@ -38,3 +38,7 @@
     border: 1px solid var(--main-color);
     border-radius: 24px;
 }
+
+@media (max-width: 768px) {
+    
+} */
