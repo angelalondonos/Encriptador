@@ -1,0 +1,40 @@
+:root {
+    --main-color: #0A3871;
+    --secondary-color: #D8DFE8;
+    --white-color: #ffffff;
+    --bg-color: #E5E5E5;
+}
+
+.btn-principal {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 24px;
+    gap: 8px;
+    width: 328px;
+    height: 67px;
+    background: var(--main-color);
+    border-radius: 24px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: var(--white-color);
+
+}
+
+.btn-secondary {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 24px;
+    gap: 8px;
+    width: 328px;
+    height: 67px;
+    background: var(--secondary-color);
+    border: 1px solid var(--main-color);
+    border-radius: 24px;
+}
