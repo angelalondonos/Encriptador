@@ -11,16 +11,30 @@ body{
     font-size: 16px;
 }
 
+header{
+    display: flex;
+    padding: 5%;
+}
+
+h1{
+    margin: 0;
+}
+.logo{
+    width: 40px;
+}
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
 button{
     border: 1px solid var(--main-color);
     border-radius: 24px;
     width: 250px;
     height: 60px;
     margin: 10px;
-}
-main{
-    display: flex;
-    align-items: center;
 }
 
 .texto{
@@ -44,13 +58,19 @@ main{
 
 .respuesta{
     display: flex;
-    align-items: center;
+    justify-content: center;
     text-align: center;
     flex-direction: column;
     background: var(--white-color);
-    width: 400px;
+    width: 350px;
+    height: 638px;
     border-radius: 24px;
     box-shadow: 0 0 15px 1px #a1a1a1;
+}
+
+.info-respuesta p:first-child {
+    font-size: 24px;
+    color: red;
 }
 
 .boton-copiar{
@@ -68,5 +88,9 @@ footer{
 @media (max-width: 768px) {
     main{
         flex-direction: column;
+        padding: 5px;
+    }
+    .observar{
+        display: none;
     }
 } 
