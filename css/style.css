@@ -68,9 +68,11 @@ button{
     box-shadow: 0 0 15px 1px #a1a1a1;
 }
 
-.info-respuesta p:first-child {
+.texto-encriptado{
+    color: var(--main-color);
     font-size: 24px;
-    color: red;
+    font-weight: bold;
+    margin: 0 5px 0 5px;
 }
 
 .boton-copiar{
@@ -85,12 +87,17 @@ footer{
     text-align: center;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 916px) {
     main{
         flex-direction: column;
         padding: 5px;
     }
     .observar{
         display: none;
+    }
+    .respuesta{
+        height: 100%;
+        width: 534px;
+        margin-top: 10px;
     }
 } 

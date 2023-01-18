@@ -3,6 +3,7 @@ const btnDesencriptar = document.querySelector('.boton-desencriptar')
 const btnEncriptar = document.querySelector('.boton-encriptar')
 const btnCopiar = document.querySelector('.boton-copiar')
 const respuesta = document.querySelector('.info-respuesta')
+const textoResultado = document.querySelector('.mensaje-resultado')
 let mensajeEncriptado = "";
 const resultadoEncriptado = document.querySelector('.texto-encriptado');
 
@@ -30,11 +31,11 @@ function encriptar() {
         }
         
     }
-
     resultadoEncriptado.innerText = mensajeEncriptado;
     respuesta.classList.add("inactive")
-    btnCopiar.classList.remove("inactive")     
-    console.log("Mensaje encriptado: " + mensajeEncriptado)
+    textoResultado.classList.remove("inactive")
+    btnCopiar.classList.remove("inactive")
+    document.getElementsByClassName("texto")[0].value = "";
 
 }
 
@@ -49,7 +50,7 @@ function encriptar() {
 function soloLetras(e) {
     let key = e.keyCode || e.which
     let tecla = String.fromCharCode(key).toString()
-    let letras = "abcdefghijklmnopqrstuvwxyz"
+    let letras = "abcdefghijklmnopqrstuvwxyz "
 
     if (letras.indexOf(tecla) == -1) {
         alert("Por favor, ingresar solo letras minúsculas y sin acentos")
