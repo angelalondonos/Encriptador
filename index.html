@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <title>Encriptador y desencriptador de texto</title>
 </head>
 
@@ -16,21 +19,35 @@
         </h1>
     </header>
     <main>
-        <section>
-             <input type="text" placeholder="Ingrese el texto aqui" id="texto">
-        </section>
-        <section>
-            <button class="btn-principal" id="boton-encriptar">Encriptar</button>
-            <button class="btn-secondary" id="boton-desencriptar">Desencriptar</button>
-        </section>
+        <div>
+            <section>
+                <input type="text" placeholder="Ingrese el texto aqui" id="texto">
+            </section>
+            <section>
+                <p>❗Solo letras minúsculas y sin acentos</p>
+                <button id="boton-encriptar">Encriptar</button>
+                <button id="boton-desencriptar">Desencriptar</button>
+            </section>
+        </div>
+        <div>
+            <section id="respuesta">
+                <div>
+                    <img src="imagenes/Muneco.svg" alt="Dibujo de persona buscando">
+                    <p><strong>Ningún mensaje fue encontrado</strong> </p>
+                    <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+                </div>
+                <div>
+                    <button>Copiar</button>
+                </div>
+            </section>
+        </div>
     </main>
-    <aside>
-        <p>Ningún mensaje fue encontrado</p>
-    </aside>
+
     <footer>
         <p>Angela Londoño - 2022</p>
     </footer>
 
     <script src="js/index.js"></script>
 </body>
+
 </html>
