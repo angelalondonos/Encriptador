@@ -21,30 +21,31 @@
     <main>
         <div>
             <section>
-                <input type="text" placeholder="Ingrese el texto aqui" id="texto">
+                <textarea cols="30" rows="10" placeholder="Ingrese el texto aqui" class="texto" onkeypress="return soloLetras(event)" required ></textarea>
             </section>
             <section>
                 <p>❗Solo letras minúsculas y sin acentos</p>
-                <button id="boton-encriptar">Encriptar</button>
-                <button id="boton-desencriptar">Desencriptar</button>
+                <button class="boton-encriptar">Encriptar</button>
+                <button class="boton-desencriptar">Desencriptar</button>
             </section>
         </div>
         <div>
-            <section id="respuesta">
-                <div>
+            <section class="respuesta">
+                <div class="info-respuesta">
                     <img src="imagenes/Muneco.svg" alt="Dibujo de persona buscando">
                     <p><strong>Ningún mensaje fue encontrado</strong> </p>
                     <p>Ingresa el texto que desees encriptar o desencriptar.</p>
                 </div>
                 <div>
-                    <button>Copiar</button>
+                    <p class="texto-encriptado"></p>
+                    <button class="boton-copiar inactive">Copiar</button>
                 </div>
             </section>
         </div>
     </main>
 
     <footer>
-        <p>Angela Londoño - 2022</p>
+        <p>&copy Copyright Angela Londoño - 2022</p>
     </footer>
 
     <script src="js/index.js"></script>

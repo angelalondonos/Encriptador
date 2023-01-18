@@ -22,7 +22,8 @@ main{
     display: flex;
     align-items: center;
 }
-#texto{
+
+.texto{
     background-color: var(--secondary-color);
     border: none;
     color: var(--main-color);
@@ -30,18 +31,18 @@ main{
     height: 500px;
 }
 
-#boton-encriptar {
+.boton-encriptar {
     background: var(--main-color);
     color: var(--white-color);
 
 }
 
-#boton-desencriptar {
+.boton-desencriptar {
     background: var(--secondary-color);
     color: var(--main-color);
 }
 
-#respuesta{
+.respuesta{
     display: flex;
     align-items: center;
     text-align: center;
@@ -50,6 +51,18 @@ main{
     width: 400px;
     border-radius: 24px;
     box-shadow: 0 0 15px 1px #a1a1a1;
+}
+
+.boton-copiar{
+    background: var(--white-color);
+}
+
+.inactive{
+    display: none;
+}
+
+footer{
+    text-align: center;
 }
 
 @media (max-width: 768px) {
