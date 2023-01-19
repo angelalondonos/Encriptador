@@ -43,6 +43,7 @@ button{
     color: var(--main-color);
     font-size: 24px;
     height: 500px;
+    width: 100%;
 }
 
 .boton-encriptar {
@@ -84,7 +85,16 @@ button{
 }
 
 footer{
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.redes-sociales{
+    width: 25px;
+    margin: 5 25px;
+    padding: 5px 5px;
+    border-radius: 50%; 
 }
 
 @media (max-width: 916px) {

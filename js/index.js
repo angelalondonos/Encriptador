@@ -9,10 +9,13 @@ const resultadoEncriptado = document.querySelector('.texto-encriptado');
 
 /*Event to click*/
 btnEncriptar.addEventListener('click', encriptar);
+btnDesencriptar.addEventListener('click', desencriptar);
+
 
 /* Functions for addEventListener */
 function encriptar() {
 
+    mensajeEncriptado = "";
     for (let index = 0; index < mensaje.value.length; index++) {
 
         let letraActual = mensaje.value.charAt(index)
@@ -29,14 +32,35 @@ function encriptar() {
         } else {
             mensajeEncriptado = mensajeEncriptado + letraActual;
         }
-        
+
     }
+    cambioDatos(mensajeEncriptado)
+
+}
+
+function desencriptar() {
+    mensajeEncriptado = mensaje.value
+    if (mensajeEncriptado.includes("ai")) {
+        mensajeEncriptado = mensajeEncriptado.replaceAll("ai", "a")
+    } if (mensajeEncriptado.includes("enter")) {
+        mensajeEncriptado = mensajeEncriptado.replaceAll("enter", "e")
+    } if (mensajeEncriptado.includes("imes")) {
+        mensajeEncriptado = mensajeEncriptado.replaceAll("imes", "i")
+    } if (mensajeEncriptado.includes("ober")) {
+        mensajeEncriptado = mensajeEncriptado.replaceAll("ober", "o")
+    } if (mensajeEncriptado.includes("ufat")) {
+        mensajeEncriptado = mensajeEncriptado.replaceAll("ufat", "u")
+    }
+    cambioDatos(mensajeEncriptado)
+
+}
+
+function cambioDatos(mensajeEncriptado) {
     resultadoEncriptado.innerText = mensajeEncriptado;
     respuesta.classList.add("inactive")
     textoResultado.classList.remove("inactive")
     btnCopiar.classList.remove("inactive")
     document.getElementsByClassName("texto")[0].value = "";
-
 }
 
 
