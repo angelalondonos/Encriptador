@@ -5,31 +5,32 @@
     --bg-color: #E5E5E5;
 }
 
-body{
+body {
     background-color: var(--secondary-color);
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
 }
 
-header{
+header {
     display: flex;
-    padding: 5%;
+    padding: 3%;
 }
 
-h1{
+h1 {
     margin: 0 0 0 10px;
 }
-.logo{
+
+.logo {
     width: 40px;
 }
 
-main{
+main {
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
 
-button{
+button {
     border: 1px solid var(--main-color);
     font-family: 'Roboto', sans-serif;
     border-radius: 24px;
@@ -38,7 +39,7 @@ button{
     margin: 10px;
 }
 
-.texto{
+.texto {
     background-color: var(--secondary-color);
     font-family: 'Roboto', sans-serif;
     border: none;
@@ -46,6 +47,14 @@ button{
     font-size: 24px;
     height: 500px;
     width: 100%;
+}
+
+::placeholder {
+    color: var(--main-color);
+}
+
+.texto:focus {
+    outline: none;
 }
 
 .boton-encriptar {
@@ -59,7 +68,7 @@ button{
     color: var(--main-color);
 }
 
-.respuesta{
+.respuesta {
     display: flex;
     justify-content: center;
     text-align: center;
@@ -71,48 +80,52 @@ button{
     box-shadow: 0 0 15px 1px #a1a1a1;
 }
 
-.texto-encriptado{
+.texto-encriptado {
     color: var(--main-color);
     font-size: 24px;
     font-weight: bold;
     margin: 0 5px 0 5px;
 }
 
-.boton-copiar{
+.boton-copiar {
     background: var(--white-color);
 }
 
-.inactive{
+.inactive {
     display: none;
 }
 
-footer{
+footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 10px;
 }
 
-.redes-sociales{
+.redes-sociales {
     width: 25px;
     margin: 5 25px;
     padding: 5px 5px;
-    border-radius: 50%; 
+    border-radius: 50%;
 }
 
 @media (max-width: 916px) {
-    main{
+    main {
         flex-direction: column;
         padding: 5px;
     }
-    .texto{
+
+    .texto {
         height: 250px;
     }
-    .observar{
+
+    .observar {
         display: none;
     }
-    .respuesta{
+
+    .respuesta {
         height: 100%;
         width: 534px;
         margin-top: 10px;
     }
-} 
+}
