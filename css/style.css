@@ -37,6 +37,7 @@ button {
     width: 250px;
     height: 60px;
     margin: 10px;
+    font-size: 20px;
 }
 
 .texto {
@@ -89,6 +90,7 @@ button {
 
 .boton-copiar {
     background: var(--white-color);
+    color: var(--main-color);
 }
 
 .inactive {
@@ -99,7 +101,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 10px;
+    margin: 15px;
 }
 
 .redes-sociales {
