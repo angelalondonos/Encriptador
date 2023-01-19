@@ -17,7 +17,7 @@ header{
 }
 
 h1{
-    margin: 0;
+    margin: 0 0 0 10px;
 }
 .logo{
     width: 40px;
@@ -31,6 +31,7 @@ main{
 
 button{
     border: 1px solid var(--main-color);
+    font-family: 'Roboto', sans-serif;
     border-radius: 24px;
     width: 250px;
     height: 60px;
@@ -39,6 +40,7 @@ button{
 
 .texto{
     background-color: var(--secondary-color);
+    font-family: 'Roboto', sans-serif;
     border: none;
     color: var(--main-color);
     font-size: 24px;
@@ -101,6 +103,9 @@ footer{
     main{
         flex-direction: column;
         padding: 5px;
+    }
+    .texto{
+        height: 250px;
     }
     .observar{
         display: none;

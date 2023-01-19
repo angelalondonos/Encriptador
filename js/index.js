@@ -7,10 +7,11 @@ const textoResultado = document.querySelector('.mensaje-resultado')
 let mensajeEncriptado = "";
 const resultadoEncriptado = document.querySelector('.texto-encriptado');
 
+
 /*Event to click*/
 btnEncriptar.addEventListener('click', encriptar);
 btnDesencriptar.addEventListener('click', desencriptar);
-
+btnCopiar.addEventListener('click', copiar);
 
 /* Functions for addEventListener */
 function encriptar() {
@@ -32,7 +33,6 @@ function encriptar() {
         } else {
             mensajeEncriptado = mensajeEncriptado + letraActual;
         }
-
     }
     cambioDatos(mensajeEncriptado)
 
@@ -52,11 +52,12 @@ function desencriptar() {
         mensajeEncriptado = mensajeEncriptado.replaceAll("ufat", "u")
     }
     cambioDatos(mensajeEncriptado)
-
 }
 
 function cambioDatos(mensajeEncriptado) {
+
     resultadoEncriptado.innerText = mensajeEncriptado;
+    resultadoEncriptado.classList.remove("inactive")
     respuesta.classList.add("inactive")
     textoResultado.classList.remove("inactive")
     btnCopiar.classList.remove("inactive")
@@ -81,4 +82,17 @@ function soloLetras(e) {
         return false
     }
 
+}
+
+/**
+ * Función que permite copiar el resultado del texto encriptado o desencriptado
+ */
+function copiar(){
+    navigator.clipboard.writeText(resultadoEncriptado.textContent);    
+    respuesta.classList.remove("inactive")
+    textoResultado.classList.add("inactive")
+    resultadoEncriptado.classList.add("inactive")
+    btnCopiar.classList.add("inactive")
+    document.getElementsByClassName("texto")[0].value = "";  
+    alert("El mensaje se copio exitosamente: " + resultadoEncriptado.textContent)
 }
